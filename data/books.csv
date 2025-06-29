@@ -1,31 +1,31 @@
-Rank,Name,Year,Genre,NA_Sales,EU_Sales,JP_Sales,Other_Sales,Global_Sales
-1,Cien años de soledad,2017,Misterio,0.44,0.86,0.67,1.5,3.47
-2,1984,2017,Misterio,3.64,1.16,1.63,0.63,7.06
-3,El Principito,1995,No Ficción,4.5,1.01,0.66,0.22,6.39
-4,Matar a un ruiseñor,1987,Fantasía,3.17,1.0,1.84,0.33,6.34
-5,Crimen y castigo,2024,Ficción,1.47,1.52,0.55,1.45,4.99
-6,Orgullo y prejuicio,1984,Romance,0.72,2.72,0.34,0.62,4.4
-7,La sombra del viento,1995,No Ficción,0.93,2.18,0.49,0.39,3.99
-8,Rayuela,1987,Ciencia Ficción,3.52,3.44,1.38,1.18,9.52
-9,Don Quijote de la Mancha,2023,Ciencia Ficción,4.04,1.93,1.26,0.91,8.14
-10,La Odisea,2001,Ciencia Ficción,3.76,2.7,1.09,1.45,9.0
-11,Fahrenheit 451,2015,Misterio,2.69,2.38,0.94,0.33,6.34
-12,Los juegos del hambre,2002,Ficción,0.9,1.69,0.24,1.25,4.08
-13,Harry Potter y la piedra filosofal,2018,Ficción,1.81,1.07,1.46,0.74,5.08
-14,El nombre del viento,2024,No Ficción,0.43,3.19,0.29,0.58,4.49
-15,El código Da Vinci,1993,Histórico,4.1,1.58,0.95,1.39,8.02
-16,La chica del tren,1995,Histórico,3.92,3.29,1.68,0.29,9.18
-17,It,1997,Histórico,3.62,1.14,1.06,0.54,6.36
-18,Drácula,2016,Histórico,4.45,2.52,1.4,0.67,9.04
-19,El retrato de Dorian Gray,2007,Histórico,4.13,2.24,1.66,0.86,8.89
-20,La carretera,1980,Ciencia Ficción,1.94,0.85,1.15,0.93,4.87
-21,El señor de los anillos,2022,Ficción,4.04,3.79,1.07,0.84,9.74
-22,El Hobbit,1981,Ficción,4.09,1.75,0.49,1.42,7.75
-23,Las ventajas de ser invisible,2009,Ciencia Ficción,1.72,2.24,0.91,0.97,5.84
-24,El psicoanalista,2014,Ciencia Ficción,1.23,1.83,0.09,0.11,3.26
-25,La ladrona de libros,1996,Romance,4.89,3.16,0.22,0.7,8.97
-26,Los pilares de la Tierra,2013,Histórico,3.59,3.92,0.34,0.48,8.33
-27,La historia interminable,1992,Fantasía,4.15,2.88,0.0,1.03,8.06
-28,Un mundo feliz,2018,Fantasía,3.16,2.2,0.9,0.12,6.38
-29,Cazadores de sombras,1990,Ficción,3.22,3.68,1.8,1.07,9.77
-30,Percy Jackson y el ladrón del rayo,2000,Histórico,3.92,2.92,0.76,0.93,8.53
+Rank,Title,Author,Year,Genre,Isbn,Copies
+1,Cien años de soledad,Gabriel García Márquez,2017,Misterio,9781928374650,50
+2,Detective Conan,Gosho Aoyama,1999,Misterio,9783849201745,20
+3,El Principito,Antoine de Saint-Exupéry,1995,No Ficción,9781029384756,50
+4,Matar a un ruiseñor,Harper Lee,1987,Fantasía,9788473629150,30
+5,Crimen y castigo,Fiódor Dostoyevski,2024,Ficción,9782398475612,90
+6,Orgullo y prejuicio,Jane Austen,1984,Romance,9787482910349,50
+7,La sombra del viento,Carlos Ruiz Zafón,1995,No Ficción,9789384726150,65
+8,Rayuela,Julio Cortázar,1987,Ciencia Ficción,9785748392017,80
+9,Don Quijote de la Mancha,Miguel de Cervantes,2023,Ciencia Ficción,9781827364510,90
+10,La Odisea,Homero,2001,Ciencia Ficción,9783948572014,50
+11,Fahrenheit 451,Ray Bradbury,2015,Misterio,9782918374651,25
+12,Los juegos del hambre,Suzanne Collins,2002,Ficción,9781203948573,32
+13,Harry Potter y la piedra filosofal,J.K. Rowling,2018,Ficción,9789384756109,80
+14,El nombre del viento,Patrick Rothfuss,2024,No Ficción,9785738491020,90
+15,El código Da Vinci,Dan Brown,1993,Histórico,9783849201742,50
+16,La chica del tren,Paula Hawkins,1995,Histórico,9788492017364,65
+17,It,Stephen King,1997,Histórico,9782193847560,25
+18,Drácula,Bram Stoker,2016,Histórico,9787482910347,90
+19,El retrato de Dorian Gray,Oscar Wilde,2007,Histórico,9781837465102,75
+20,La carretera,Cormac McCarthy,1980,Ciencia Ficción,9783849201751,30
+21,El señor de los anillos,J.R.R. Tolkien,2022,Ficción,9789283746501,80
+22,El Hobbit,J.R.R. Tolkien,1981,Ficción,9783948572011,65
+23,Las ventajas de ser invisible,Stephen Chbosky,2009,Ciencia Ficción,9787482910345,32
+24,El psicoanalista,John Katzenbach,2014,Ciencia Ficción,9784839201740,25
+25,La ladrona de libros,Markus Zusak,1996,Romance,9781129384756,75
+26,Los pilares de la Tierra,Ken Follett,2013,Histórico,9785748392013,30
+27,La historia interminable,Michael Ende,1992,Fantasía,9788473629152,75
+28,Un mundo feliz,Aldous Huxley,2018,Fantasía,9781938475610,65
+29,Cazadores de sombras,Cassandra Clare,1990,Ficción,9789384726153,80
+30,Percy Jackson y el ladrón del rayo,Rick Riordan,2000,Histórico,9783849201749,30
