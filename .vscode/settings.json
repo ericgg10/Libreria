@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        ".venv/**/*": true,
+        "**/__pycache__/": true,
+        "**/*.py[oc]": true,
+        "**/build/": true,
+        "**/dist/": true,
+        "**/wheels/": true,
+        "**/*.egg-info": true,
+        "**/.venv": true,
+        "**/.db": true,
+        "**/.env": true
+    }
+}
