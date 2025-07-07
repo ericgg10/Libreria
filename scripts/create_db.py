@@ -26,6 +26,9 @@ def parse_date(date_str):
 
 def insert_values():
     with Session(engine) as session:
+        user_ids = []
+        books_ids = []
+
         for _, row in books.iterrows():
             book = session.exec(select(Book).filter_by(title=row["Title"])).first()
             if not book:
@@ -39,6 +42,8 @@ def insert_values():
                 )
                 session.add(book)
                 session.flush()
+            books_ids.append(book.id)
+
         for _, row in users.iterrows():
             user = session.exec(select(User).filter_by(username=row["Username"])).first()
             if not user:
@@ -49,20 +54,31 @@ def insert_values():
                 )
                 session.add(user)
                 session.flush()
+            user_ids.append(user.id)
+
         for _, row in loans.iterrows():
-            loan = Loan(
-                id=row["Loan_Rank"],
-                user_id=row["User_Rank"],
-                book_id=row["Book_Rank"],
-                loan_date=parse_date(row["Loan_Date"]),
-                return_date=parse_date(row["Return_Date"])
-                if pd.notna(row["Return_Date"])
-                else None,
-                loan_days=row["Loan_Days"] if pd.notna(row["Loan_Days"]) else None,
-                returned=row["Returned"],
-            )
-            session.add(loan)
+            user_idx = int(row["User_Rank"]) - 1
+            book_idx = int(row["Book_Rank"]) - 1
+            print("User_Rank:", row["User_Rank"], "Book_Rank:", row["Book_Rank"])
+
+            if user_idx < len(user_ids) and book_idx < len(books_ids):
+                loan = Loan(
+                    id=row["Loan_Rank"],
+                    user_id=user_ids[user_idx],  # <- corregido
+                    book_id=books_ids[book_idx],  # <- corregido
+                    loan_date=parse_date(row["Loan_Date"]),
+                    return_date=parse_date(row["Return_Date"])
+                    if pd.notna(row["Return_Date"])
+                    else None,
+                    loan_days=row["Loan_Days"] if pd.notna(row["Loan_Days"]) else None,
+                    returned=row["Returned"],
+                )
+                session.add(loan)
+            else:
+                print(f"[ERROR] Índices fuera de rango: user_idx={user_idx}, book_idx={book_idx}")
+
         session.commit()
+        print("✅ Préstamos insertados exitosamente.")
 
 
 def main():
