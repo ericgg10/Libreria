@@ -4,7 +4,7 @@ from uuid import UUID
 from fastapi import APIRouter, HTTPException, Query, status
 
 from src.database import book_db, db_session
-from src.models.books import Book
+from src.models.books import Book, BookCreate, BookUpdate
 from src.models.loan import Loan
 from src.models.users import User
 
@@ -52,3 +52,21 @@ def get_loans_books(db: db_session, book_id: UUID):
             detail="No loans were found for this book",
         )
     return loans
+
+
+@router.post("/", status_code=status.HTTP_201_CREATED)
+def create_book(db: db_session, book_info: BookCreate):
+    new_book = Book(**book_info.model_dump())
+    created_book = book_db.create_book(db, new_book)
+    return created_book
+
+
+@router.patch("/")
+def update_books(db: db_session, new_book: BookUpdate):
+    return book_db.update_book(db, new_book)
+
+
+@router.delete("/{id}")
+def delete_books(db: db_session, id: UUID):
+    deleted_book = book_db.delete_book(db, id)
+    return deleted_book

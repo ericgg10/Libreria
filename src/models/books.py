@@ -11,3 +11,22 @@ class Book(SQLModel, table=True):
     genre: str
     isbn: str
     copies: int
+
+
+class BookUpdate(SQLModel):
+    id: uuid.UUID
+    title: str
+    author: str
+    year: int
+    genre: str
+    isbn: str
+    copies: int
+
+
+class BookCreate(SQLModel):
+    title: str
+    author: str
+    year: int
+    genre: str
+    isbn: str
+    copies: int
