@@ -8,3 +8,16 @@ class User(SQLModel, table=True):
     username: str
     password: str
     phone: str
+
+
+class UserUpdate(SQLModel):
+    id: uuid.UUID
+    username: str
+    password: str
+    phone: str
+
+
+class UserCreate(SQLModel):
+    username: str
+    password: str
+    phone: str
