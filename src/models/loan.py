@@ -24,7 +24,6 @@ class Loan(SQLModel, table=True):
 
 
 class LoanUpdate(SQLModel):
-    id: int
     returned: Optional[bool] = None
 
 

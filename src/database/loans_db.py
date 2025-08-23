@@ -27,8 +27,8 @@ def create_loans(db: Session, loan_info: Loan):
     return loan_info
 
 
-def update_loans(db: Session, new_loan: Loan):
-    query = select(Loan).where(Loan.id == new_loan.id)
+def update_loans(db: Session, loan_id: int, new_loan: Loan):
+    query = select(Loan).where(Loan.id == loan_id)
     old_loan = db.exec(query).first()
 
     if new_loan is not None:

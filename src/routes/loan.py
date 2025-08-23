@@ -53,5 +53,5 @@ def create_loans(db: db_session, loan_info: LoanCreate):
 
 
 @router.patch("/{id}")
-def update_loans(db: db_session, new_loan: LoanUpdate):
-    return loans_db.update_loans(db, new_loan)
+def update_loans(db: db_session, id: int, new_loan: LoanUpdate):
+    return loans_db.update_loans(db, id, new_loan)
