@@ -51,9 +51,6 @@ python -m scripts.filename
 
 
 ## Tareas pendientes
--Obtener los prestamos de un usuario pero sacando su nombre y el nombre del libro en vez del id
--Revisar de que todas las funciones lanzen los errores correspondientes
 -Implementar páginación con page y size ahora que devuelven todos los GET
--Poner una restricción de que no se pueden crear prestamos si no hay ejemplares de ese libro
 -Crear una carpeta para los test y hacer test de la busqueda, creación de usuarios, libros y prestamos
 -Poner seguridad con token en todos los endpoint
