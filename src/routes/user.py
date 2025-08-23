@@ -20,7 +20,7 @@ def get_users_by_id(db: db_session, id: UUID):
     user = users_db.get_user_by_id(db, id)
     if not user:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND, detail=f"Book not found with id {id}"
+            status_code=status.HTTP_404_NOT_FOUND, detail=f"User not found with id {id}"
         )
     return user
 
