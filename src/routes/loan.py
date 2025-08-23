@@ -37,6 +37,9 @@ def create_loans(db: db_session, loan_info: LoanCreate):
     if not book:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Not found book")
 
+    copies_left = book.copies
+    if copies_left < 1:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No copies left")
     new_loan = Loan(
         user_id=user.id,
         book_id=book.id,
