@@ -21,3 +21,17 @@ class Loan(SQLModel, table=True):
     return_date: Optional[date]
     loan_days: Optional[int]
     returned: bool
+
+
+class LoanUpdate(SQLModel):
+    id: int
+    returned: Optional[bool] = None
+
+
+class LoanCreate(SQLModel):
+    user_name: Optional[str] = None
+    book_title: Optional[str] = None
+    loan_date: Optional[date] = None
+    return_date: Optional[date] = None
+    loan_days: Optional[int] = None
+    returned: Optional[bool] = None

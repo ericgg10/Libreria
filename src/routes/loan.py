@@ -25,3 +25,33 @@ def get_all_loans_active(db: db_session):
             status_code=status.HTTP_400_BAD_REQUEST, detail="Not found any activate Loan"
         )
     return loans
+
+
+@router.post("/", status_code=status.HTTP_201_CREATED)
+def create_loans(db: db_session, loan_info: LoanCreate):
+    user = db.exec(select(User).where(User.username == loan_info.user_name)).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Not found user")
+
+    book = db.exec(select(Book).where(Book.title == loan_info.book_title)).first()
+    if not book:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Not found book")
+
+    new_loan = Loan(
+        user_id=user.id,
+        book_id=book.id,
+        loan_date=loan_info.loan_date,
+        loan_days=loan_info.loan_days,
+        returned=False,
+    )
+
+    db.add(new_loan)
+    db.commit()
+    db.refresh(new_loan)
+
+    return new_loan
+
+
+@router.patch("/{id}")
+def update_loans(db: db_session, new_loan: LoanUpdate):
+    return loans_db.update_loans(db, new_loan)
