@@ -34,3 +34,13 @@ class LoanCreate(SQLModel):
     return_date: Optional[date] = None
     loan_days: Optional[int] = None
     returned: Optional[bool] = None
+
+
+class LoanPublic(SQLModel):
+    id: int
+    username: str
+    book_title: str
+    loan_date: Optional[date] = None
+    return_date: Optional[date] = None
+    loan_days: Optional[int] = None
+    returned: Optional[bool] = None
