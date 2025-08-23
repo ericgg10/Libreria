@@ -14,7 +14,6 @@ class Book(SQLModel, table=True):
 
 
 class BookUpdate(SQLModel):
-    id: uuid.UUID
     title: str
     author: str
     year: int

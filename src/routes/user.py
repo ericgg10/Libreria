@@ -43,9 +43,9 @@ def create_user(db: db_session, user_info: UserCreate):
     return created_user
 
 
-@router.patch("/")
-def update_user(db: db_session, new_user: UserUpdate):
-    return users_db.update_user(db, new_user)
+@router.patch("/{id}")
+def update_user(db: db_session, id: UUID, new_user: UserUpdate):
+    return users_db.update_user(db, id, new_user)
 
 
 @router.delete("/{id}")

@@ -52,8 +52,8 @@ def create_book(db: Session, book_info: Book):
     return book_info
 
 
-def update_book(db: Session, new_book: Book):
-    query = select(Book).where(Book.id == new_book.id)
+def update_book(db: Session, book_id: UUID, new_book: Book):
+    query = select(Book).where(Book.id == book_id)
     old_book = db.exec(query).first()
     old_book.title = new_book.title if new_book.title else old_book.title
     old_book.author = new_book.author if new_book.author else old_book.author

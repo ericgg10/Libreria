@@ -31,8 +31,8 @@ def create_user(db: Session, user_info: User):
     return user_info
 
 
-def update_user(db: Session, new_user: User):
-    query = select(User).where(User.id == new_user.id)
+def update_user(db: Session, user_id: UUID, new_user: User):
+    query = select(User).where(User.id == user_id)
     old_user = db.exec(query).first()
     old_user.username = new_user.username if new_user.username else old_user.username
     old_user.password = new_user.password if new_user.password else old_user.password

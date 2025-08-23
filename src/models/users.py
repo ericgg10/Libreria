@@ -11,7 +11,6 @@ class User(SQLModel, table=True):
 
 
 class UserUpdate(SQLModel):
-    id: uuid.UUID
     username: str
     password: str
     phone: str

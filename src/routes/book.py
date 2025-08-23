@@ -61,9 +61,9 @@ def create_book(db: db_session, book_info: BookCreate):
     return created_book
 
 
-@router.patch("/")
-def update_books(db: db_session, new_book: BookUpdate):
-    return book_db.update_book(db, new_book)
+@router.patch("/{id}")
+def update_books(db: db_session, id: UUID, new_book: BookUpdate):
+    return book_db.update_book(db, id, new_book)
 
 
 @router.delete("/{id}")
