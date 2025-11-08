@@ -14,6 +14,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ruff>=0.12.0",
+    "sqlmodel>=0.0.24",
 ]
 
 [tool.ruff]

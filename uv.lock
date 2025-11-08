@@ -115,6 +115,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "ruff" },
+    { name = "sqlmodel" },
 ]
 
 [package.metadata]
@@ -126,7 +127,10 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.12.0" }]
+dev = [
+    { name = "ruff", specifier = ">=0.12.0" },
+    { name = "sqlmodel", specifier = ">=0.0.24" },
+]
 
 [[package]]
 name = "numpy"
